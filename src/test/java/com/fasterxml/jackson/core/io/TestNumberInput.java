@@ -8,32 +8,21 @@ import org.junit.Test;
 public class TestNumberInput
 {
 	@Test
-	public void testParseIntCharArrayIntInt()
-	{
-		fail("Not yet implemented");
-	}
-
-	@Test
 	public void testParseIntString()
 	{
 		assertEquals(10, NumberInput.parseInt("10"));
 	}
+	
 	@Test
 	public void testParseIntNegativeString()
 	{
 		assertEquals(-10, NumberInput.parseInt("-10"));
 	}
+	
 	@Test(expected=NumberFormatException.class)
 	public void testParseIntNaNString()
 	{
 		NumberInput.parseInt("-ii");
-	}
-
-
-	@Test
-	public void testParseLongCharArrayIntInt()
-	{
-		fail("Not yet implemented");
 	}
 
 	@Test
@@ -72,7 +61,6 @@ public class TestNumberInput
 		assertEquals(0L,NumberInput.parseAsLong("ooo", 0L));
 	}
 
-
 	@Test
 	public void testParseAsDouble()
 	{
@@ -96,8 +84,4 @@ public class TestNumberInput
 	{
 		NumberInput.parseDouble("fkjdsj;fk");
 	}
-
-
-
-
 }
